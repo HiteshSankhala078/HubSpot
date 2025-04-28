@@ -1,0 +1,140 @@
+      
+        <!-- Tab -->
+        
+        <div class="tab-box">
+          <div class="map-list-box dis-flex">
+            <div class="map-list-block">
+              <a href="#" tabid="tab1" class="active">
+                tab 1
+              </a>
+            </div>
+            <div class="map-list-block">
+              <a href="#" tabid="tab2">
+                tab 2 
+              </a>
+            </div>
+          </div>
+          <div class="click-content-box active" id="tab1">
+            <div class="click-content-block content">
+              tab 1 content
+            </div>
+          </div>
+          <div class="click-content-box" id="tab2">
+            <div class="click-content-block content">
+              tab 2 content
+            </div>
+          </div>
+        </div>
+
+    <script>
+      $('.map-list-block a').click(function() {
+        $('.map-list-block a').removeClass('active');
+        $(this).addClass('active');
+        $('.click-content-box').removeClass('active');
+        var ids = '#' + $(this).attr('tabid');
+        $(ids).addClass('active');
+        return false;
+      });
+      </script>
+
+
+
+<div class="faq-box">
+  {% for item2 in item.content_block_group %}
+  <div class="faq-block-content"> 
+    <div class="inner-fqa-block">
+      <div class="title dis-flex align-center {% if loop.first %} active {% endif %}">
+        <h3 class="mb-0">
+          {{ item2.title }}
+        </h3>
+        <div class="icon">
+          <div class="bottom">
+            <svg xmlns="http://www.w3.org/2000/svg" width="43" height="44" viewBox="0 0 43 44" fill="none">
+              <path d="M29.5364 23.2997L21.25 31.3748M21.25 31.3748L12.9636 23.2997M21.25 31.3748L21.25 13.6322M9.53121 3.25L32.9688 3.25C36.852 3.25 40 6.39798 40 10.2812L40 33.7186C40 37.6018 36.852 40.7498 32.9688 40.7498L9.53121 40.7498C5.64798 40.7498 2.5 37.6018 2.5 33.7186L2.5 10.2812C2.5 6.39798 5.64798 3.25 9.53121 3.25Z" stroke="black" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M29.5364 23.2997L21.25 31.3748M21.25 31.3748L12.9636 23.2997M21.25 31.3748L21.25 13.6322M9.53121 3.25L32.9688 3.25C36.852 3.25 40 6.39798 40 10.2812L40 33.7186C40 37.6018 36.852 40.7498 32.9688 40.7498L9.53121 40.7498C5.64798 40.7498 2.5 37.6018 2.5 33.7186L2.5 10.2812C2.5 6.39798 5.64798 3.25 9.53121 3.25Z" stroke="black" stroke-opacity="0.2" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M29.5364 23.2997L21.25 31.3748M21.25 31.3748L12.9636 23.2997M21.25 31.3748L21.25 13.6322M9.53121 3.25L32.9688 3.25C36.852 3.25 40 6.39798 40 10.2812L40 33.7186C40 37.6018 36.852 40.7498 32.9688 40.7498L9.53121 40.7498C5.64798 40.7498 2.5 37.6018 2.5 33.7186L2.5 10.2812C2.5 6.39798 5.64798 3.25 9.53121 3.25Z" stroke="black" stroke-opacity="0.2" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M29.5364 23.2997L21.25 31.3748M21.25 31.3748L12.9636 23.2997M21.25 31.3748L21.25 13.6322M9.53121 3.25L32.9688 3.25C36.852 3.25 40 6.39798 40 10.2812L40 33.7186C40 37.6018 36.852 40.7498 32.9688 40.7498L9.53121 40.7498C5.64798 40.7498 2.5 37.6018 2.5 33.7186L2.5 10.2812C2.5 6.39798 5.64798 3.25 9.53121 3.25Z" stroke="black" stroke-opacity="0.2" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="43" height="44" viewBox="0 0 43 44" fill="none">
+              <path d="M12.9636 20.7003L21.25 12.6252M21.25 12.6252L29.5364 20.7003M21.25 12.6252L21.25 30.3678M32.9688 40.75L9.53121 40.75C5.64798 40.75 2.5 37.602 2.5 33.7188L2.5 10.2814C2.5 6.3982 5.64798 3.25022 9.53121 3.25022L32.9688 3.25022C36.852 3.25022 40 6.3982 40 10.2814L40 33.7188C40 37.602 36.852 40.75 32.9688 40.75Z" stroke="black" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12.9636 20.7003L21.25 12.6252M21.25 12.6252L29.5364 20.7003M21.25 12.6252L21.25 30.3678M32.9688 40.75L9.53121 40.75C5.64798 40.75 2.5 37.602 2.5 33.7188L2.5 10.2814C2.5 6.3982 5.64798 3.25022 9.53121 3.25022L32.9688 3.25022C36.852 3.25022 40 6.3982 40 10.2814L40 33.7188C40 37.602 36.852 40.75 32.9688 40.75Z" stroke="black" stroke-opacity="0.2" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12.9636 20.7003L21.25 12.6252M21.25 12.6252L29.5364 20.7003M21.25 12.6252L21.25 30.3678M32.9688 40.75L9.53121 40.75C5.64798 40.75 2.5 37.602 2.5 33.7188L2.5 10.2814C2.5 6.3982 5.64798 3.25022 9.53121 3.25022L32.9688 3.25022C36.852 3.25022 40 6.3982 40 10.2814L40 33.7188C40 37.602 36.852 40.75 32.9688 40.75Z" stroke="black" stroke-opacity="0.2" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12.9636 20.7003L21.25 12.6252M21.25 12.6252L29.5364 20.7003M21.25 12.6252L21.25 30.3678M32.9688 40.75L9.53121 40.75C5.64798 40.75 2.5 37.602 2.5 33.7188L2.5 10.2814C2.5 6.3982 5.64798 3.25022 9.53121 3.25022L32.9688 3.25022C36.852 3.25022 40 6.3982 40 10.2814L40 33.7188C40 37.602 36.852 40.75 32.9688 40.75Z" stroke="black" stroke-opacity="0.2" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      {% if item2.content_block %}
+      <div class="content" {% if loop.first %} style="display: block;" {% endif %} >
+        {{ item2.content_block }}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+.faq-section .faq-block-content .inner-fqa-block .title h3 {width: calc(100% - 43px);line-height: 1.1;font-size: 36px;font-weight: 400;font-family: Bowlby One,serif;padding-right: 40px;}
+.faq-section .faq-block-content .inner-fqa-block .title {justify-content: space-between;padding: 20px 40px;cursor: pointer;}
+.faq-section .faq-block-content .inner-fqa-block .title .icon .top {display: none;}
+.faq-section .faq-block-content .inner-fqa-block .title .icon .bottom {display: flex;align-items: flex-start;}
+.faq-section .faq-block-content .inner-fqa-block .title.active .icon .bottom {transform: rotate(180deg);}
+.faq-section .faq-block-content .inner-fqa-block .content {display: none;line-height: 1.3;padding: 0 40px 20px;}
+
+
+{% require_js position="footer" %}
+<script>
+  $(document).ready(function(){
+
+    $(".faq-block-content .title").click(function(){
+      // Hide all other content sections
+      $(".faq-block-content .content").not($(this).next()).slideUp();
+      $(".faq-block-content .title").not($(this)).removeClass("active");
+      //         $(".faq-block-content .title .icon").not($(this).find(".icon")).text("+");
+
+      // Toggle the clicked content visibility
+      $(this).next(".content").slideToggle();
+
+      // Toggle active class for styling
+      $(this).toggleClass("active");
+    });
+  });
+</script>
+{% end_require_js %}
+
+
+<!-- basemodule -->
+<div class="basemodulestyle w100">
+	<span class="basemoduleoverlay"></span>
+	<div class="basemoduleparent">
+		<div class="container">
+          <div class="section-heading">
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- {% require_css %}
+<style>
+	 {% scope_css %}
+    {# Desktop Styling #}
+    .basemodulestyle{
+        position:relative;
+        {% if module.style.background_property.select_background_type == 'bg_img'  %}
+        {{ module.style.background_property.bg_img.css }};
+        {% elif module.style.background_property.select_background_type == 'bg_color' %}
+        background-color:rgba({{ module.style.background_property.bg_color.color|convert_rgb }},{{ module.style.background_property.bg_color.opacity/100 }});
+        {% endif %}
+    } 
+    /****  Overlay Start  *****/
+    {% if module.style.background_property.select_background_type == 'bg_img'  %}
+    .basemoduleoverlay{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color:rgba({{ module.style.background_property.overlay_color.color|convert_rgb }},{{ module.style.background_property.overlay_color.opacity/100 }});}
+    {% endif %}
+    /****  Overlay Start  *****/
+    .basemoduleparent {position:relative; z-index:5}
+
+	{% end_scope_css %}
+</style>
+{% end_require_css %} -->
